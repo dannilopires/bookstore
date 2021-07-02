@@ -1,10 +1,20 @@
 
 public class Livro {
-	String titulo;
-	String descricao;
-	double valor;
-	String isbn; //International Standard Book Number (numero de identificação)
-	Autor autor;
+	/*Todo atributo de classe deve ser privado,
+	 * assim garantimos que ninguém os acesse
+	 * diretamente e viole nossas regras de negócio
+	 */
+	private String titulo;
+	private String descricao;
+	private double valor;
+	private String isbn; //International Standard Book Number (numero de identificação)
+	private Autor autor;
+
+	public Livro(Autor autor) {
+		this.autor = autor;
+		this.isbn = "000-00-00000-00-0";
+	}
+	
 	
 	//tipoRetorno nomeDoMétodo()
 	void mostrarDetalhes() {
@@ -26,8 +36,19 @@ public class Livro {
 	 * se trata de um atributo da classe, e
 	 * não uma variável qualquer.
 	 */
-	public void aplicaDescontoDe(double porcentagem) {
+	public boolean aplicaDescontoDe(double porcentagem) {
+		if (porcentagem > 0.3) {
+			return false;
+		}
+		
+		/*if (porcentagem > 0.3){ 
+		 * 	System.out.println("Desconto não pode ser maior
+		 * do que 30%");
+		 * }
+		 */
+		
 		this.valor -= this.valor * porcentagem;
+		return true;
 	}
 	
 	boolean temAutor() {
@@ -35,5 +56,42 @@ public class Livro {
 		return notNull;
 	}
 	
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public String getIsbn() {
+		return isbn;
+	}
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+	public Autor getAutor() {
+		return autor;
+	}
+	public void setAutor(Autor autor) {
+		this.autor = autor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+	
+	public double getValor() {
+		return this.valor;
+	}
+	
 
+	/*Lembre-se de evitar deixar informações
+	 * tão específicas em seus moldes, além de
+	 * não sobrecarregá-los com comportamentos
+	 * que não deveriam ser de sua responsabilidade.
+	 */
 }
