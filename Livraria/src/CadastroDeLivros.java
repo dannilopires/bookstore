@@ -1,43 +1,41 @@
 
 public class CadastroDeLivros {
 	public static void main(String[] args) {
-		Livro livro = new Livro();
-		livro.titulo = "Java 8 Prático";
-		livro.descricao = "Novos recursos da linguagem";
-		livro.valor = 59.90;
-		livro.isbn = "978-85-66250-46-6\n";
-		
 		Autor autor = new Autor();
-		autor.nome = "Rodrigo Turini";
-		autor.email = "turini@caelum.com.br";
-		autor.cpf = "123.456.789-10";
+		autor.setNome("Rodrigo Turini");
+		autor.setEmail("turini@caelum.com.br");
+		autor.setCpf("123.456.789-10");
 		
-		livro.autor = autor;
+		Livro livro = new Livro(autor);
+		livro.setTitulo("Java 8 Prático");
+		livro.setDescricao("Novos recursos da linguagem");
+		livro.setValor(35.90);
+		livro.setIsbn("978-85-66250-46-6\n");
 		
 		livro.mostrarDetalhes();
 		
-		
-		Livro livro2 = new Livro();
-		livro2.titulo = "Lógica de programação";
-		livro2.descricao = "Aprenda algoritmos e entenda os fundamentos";
-		livro2.valor = 55.90;
-		livro2.isbn = "978-85-66250-22-0\n";
-		
 		Autor autor2 = new Autor();
-		autor2.nome = "Paulo Silveira";
-		autor2.email = "silveira@caelum.com.br";
-		autor2.cpf = "123.456.789-10";
+		autor2.setNome("Paulo Silveira");
+		autor2.setEmail("silveira@caelum.com.br");
+		autor2.setCpf("123.456.789-10");
 		
-		livro2.autor = autor2;
+		Livro livro2 = new Livro(autor2);
+		livro2.setTitulo("Lógica de programação");
+		livro2.setDescricao("Aprenda algoritmos e entenda os fundamentos");
+		livro2.setValor(55.90);
+		livro2.setIsbn("978-85-66250-22-0\n");
 		
 		livro2.mostrarDetalhes();
 		
 		//livro.valor -= livro.valor * 0.1; //desconto de 10%
 		
-		livro.aplicaDescontoDe(0.1);
+		livro.aplicaDescontoDe(0.3);
 		
-		System.out.println("Valor do livro com  10% de desconto: " + livro.valor);
+		System.out.println("Valor do livro com desconto: " + livro.getValor());
 		
+		//Livro livro3 = new Livro(); // testando o construtor 
+		
+		//Livro livro4 = new Livro();
 	}
 	
 
