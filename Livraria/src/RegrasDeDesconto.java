@@ -2,7 +2,7 @@
 public class RegrasDeDesconto {
 	public static void main(String[] args) {
 		Autor autor3 = new Autor();
-		autor3.setNome("Machado de Asssis");
+		autor3.setNome("Machado de Assis");
 		
 		Livro livro = new Livro(autor3);
 		livro.setValor(55.00); 
@@ -14,6 +14,16 @@ public class RegrasDeDesconto {
 		} else {
 			System.out.println("Valor com desconto: " + livro.getValor());
 		}
+		
+		Ebook ebook = new Ebook(autor3);
+		ebook.setValor(29.90);
+		
+		if (!ebook.aplicaDescontoDe(0.15)) {
+			System.out.println("Desconto no ebook não pode ser maior do que 15%");
+		} else {
+			System.out.println("Valor do ebook com desconto: " + ebook.getValor());
+		}
+		
 	}
 
 }

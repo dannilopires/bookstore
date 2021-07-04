@@ -9,10 +9,12 @@ public class Livro {
 	private double valor;
 	private String isbn; //International Standard Book Number (numero de identificação)
 	private Autor autor;
+	private boolean impresso;
 
 	public Livro(Autor autor) {
 		this.autor = autor;
 		this.isbn = "000-00-00000-00-0";
+		this.impresso = true;
 	}
 	
 	
@@ -39,14 +41,7 @@ public class Livro {
 	public boolean aplicaDescontoDe(double porcentagem) {
 		if (porcentagem > 0.3) {
 			return false;
-		}
-		
-		/*if (porcentagem > 0.3){ 
-		 * 	System.out.println("Desconto não pode ser maior
-		 * do que 30%");
-		 * }
-		 */
-		
+		} 
 		this.valor -= this.valor * porcentagem;
 		return true;
 	}
@@ -87,6 +82,7 @@ public class Livro {
 	public double getValor() {
 		return this.valor;
 	}
+	
 	
 
 	/*Lembre-se de evitar deixar informações
