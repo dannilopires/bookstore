@@ -36,6 +36,16 @@ public class CadastroDeLivros {
 		//Livro livro3 = new Livro(); // testando o construtor 
 		
 		//Livro livro4 = new Livro();
+		
+		Autor autor3 = new Autor();
+		autor3.setNome("Lima Barreto");
+		autor3.setEmail("lima-barreto@gmail.com.br");
+		autor3.setCpf("98765312");
+		
+		Ebook ebook = new Ebook(autor3);
+		ebook.setTitulo("Clara dos Anjos");
+		
+		ebook.mostrarDetalhes();
 	}
 	
 
