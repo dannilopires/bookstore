@@ -4,12 +4,12 @@ public class RegrasDeDesconto {
 		Autor autor3 = new Autor();
 		autor3.setNome("Machado de Assis");
 		
-		Livro livro = new Livro(autor3);
-		livro.setValor(55.00); 
+		Livro livro = new MiniLivro(autor3);
+		livro.setValor(39.90); 
 		
 		System.out.println("Valor atual: " + livro.getValor());
 		
-		if (!livro.aplicaDescontoDe(0.4)) {
+		if (!livro.aplicaDescontoDe(0.3)) {
 			System.out.println("Desconto não pode ser maior do que 30%");
 		} else {
 			System.out.println("Valor com desconto: " + livro.getValor());
