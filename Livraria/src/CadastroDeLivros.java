@@ -28,9 +28,8 @@ public class CadastroDeLivros {
 		livro2.mostrarDetalhes();
 		
 		//livro.valor -= livro.valor * 0.1; //desconto de 10%
-		
-		livro.aplicaDescontoDe(0.3);
-		
+	
+	
 		System.out.println("Valor do livro com desconto: " + livro.getValor());
 		
 		//Livro livro3 = new Livro(); // testando o construtor 

@@ -3,7 +3,7 @@
  * estamos dizendo que um Ebook(subclasse) HERDA
  * tudo o que a classe Livro(superclasse) tem
  */
-public class Ebook extends Livro {
+public class Ebook extends Livro implements Promocional {
 	
 	private String waterMark;
 	
@@ -28,11 +28,9 @@ public class Ebook extends Livro {
 	 */
 	@Override
 	public boolean aplicaDescontoDe(double porcentagem) {
-		if (porcentagem > 0.15) {
-			return false;
-		} 
-		
-		return super.aplicaDescontoDe(porcentagem);
+		return false;
+	}
+
 		
 		/*
 		 * Um atributo private só pode ser acessado
@@ -46,7 +44,6 @@ public class Ebook extends Livro {
 		 * diretamente, usamos os métodos getValor e setValor
 		 */
 		
-	}
 	
 	public String getWaterMark() {
 		return waterMark;

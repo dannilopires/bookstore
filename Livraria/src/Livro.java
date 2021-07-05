@@ -8,7 +8,12 @@
  * servir exclusivamente para HERANÇA e POLIMORFISMO.
  */
 
-public abstract class Livro {
+/*
+ * implements = a classe Livro 'assina' o contrato 
+ * Produto (interface) 
+ */
+
+public abstract class Livro implements Produto {
 	/*Todo atributo de classe deve ser privado,
 	 * assim garantimos que ninguém os acesse
 	 * diretamente e viole nossas regras de negócio
@@ -55,7 +60,6 @@ public abstract class Livro {
 	 * pai(superclasse), caso contrário seu código não 
 	 * compilará.
 	 */
-	public abstract boolean aplicaDescontoDe(double porcentagem);
 	
 	boolean temAutor() {
 		boolean notNull = this.autor != null;

@@ -15,18 +15,16 @@ public class RegistroDeVendas {
 		ebook.setTitulo("Vidas Secas");
 		ebook.setValor(29.90);
 		
-		Ebook ebook2 = new Ebook(autor2);
-		ebook2.setTitulo("Quincas Borba");
-		ebook.setValor(20.00);
-		
 		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 		
 		carrinho.adiciona(livroFisico);
 		carrinho.adiciona(ebook);
-		carrinho.adiciona(ebook2);
 		
 		
 		System.out.println("TOTAL = " + carrinho.getTotal());
 	
+		if (livroFisico.aplicaDescontoDe10PorCento()) {
+			System.out.println("Valor agora é " + livroFisico.getValor());
+		}
 	}
 }

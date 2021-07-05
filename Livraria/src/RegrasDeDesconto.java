@@ -1,10 +1,10 @@
 
 public class RegrasDeDesconto {
 	public static void main(String[] args) {
-		Autor autor3 = new Autor();
-		autor3.setNome("Machado de Assis");
+		Autor autor = new Autor();
+		autor.setNome("Machado de Assis");
 		
-		Livro livro = new MiniLivro(autor3);
+		Livro livro = new MiniLivro(autor);
 		livro.setValor(39.90); 
 		
 		System.out.println("Valor atual: " + livro.getValor());
@@ -15,7 +15,7 @@ public class RegrasDeDesconto {
 			System.out.println("Valor com desconto: " + livro.getValor());
 		}
 		
-		Ebook ebook = new Ebook(autor3);
+		Ebook ebook = new Ebook(autor);
 		ebook.setValor(29.90);
 		
 		if (!ebook.aplicaDescontoDe(0.15)) {

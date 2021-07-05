@@ -10,7 +10,7 @@ public class CarrinhoDeCompras {
 	
 	public void adiciona(Livro livro) {
 		System.out.println("Adicionando : " + livro);
-		livro.aplicaDescontoDe(0.05);
+		//livro.aplicaDescontoDe(0.05);
 		total += livro.getValor();
 	
 		/*Como estamos imprimindo o objeto inteiro
@@ -20,6 +20,17 @@ public class CarrinhoDeCompras {
 		 * Ex: Adicionando: LivroFisico@15db9742
 		 * Adicionando : Ebook@6d06d69c
 		 */
+	}
+	
+	public void adiciona(Revista revista) {
+		System.out.println("Adicionando: " + revista);
+		revista.aplicaDescontoDe(0.05);
+		total += revista.getValor();
+	}
+	
+	public void adiciona(Produto produto) {
+		System.out.println("Adicionando: " + produto);
+		total += produto.getValor();
 	}
 	
 	public double getTotal() {
