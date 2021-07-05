@@ -1,5 +1,14 @@
 
-public class Livro {
+/*
+ * Afinal, para que serve a classe Livro, se não podemos 
+ * mais instanciá-la? Esta classe idealiza tudo o que um
+ * Livro tem, ela ainda está sendo muito útil isolando
+ * todos os atributos e comportamentos que são uma padrão
+ * entre os diferentes tipos de livro. A classe passa a
+ * servir exclusivamente para HERANÇA e POLIMORFISMO.
+ */
+
+public abstract class Livro {
 	/*Todo atributo de classe deve ser privado,
 	 * assim garantimos que ninguém os acesse
 	 * diretamente e viole nossas regras de negócio
@@ -38,13 +47,15 @@ public class Livro {
 	 * se trata de um atributo da classe, e
 	 * não uma variável qualquer.
 	 */
-	public boolean aplicaDescontoDe(double porcentagem) {
-		if (porcentagem > 0.3) {
-			return false;
-		} 
-		this.valor -= this.valor * porcentagem;
-		return true;
-	}
+	
+	/*
+	 * Toda classe abstrata pode ter métodos abstratos.
+	 * Toda classe filha(subclasse) concreta(não abstrata)
+	 * é obrigada a escrever os métodos abstratos da classe
+	 * pai(superclasse), caso contrário seu código não 
+	 * compilará.
+	 */
+	public abstract boolean aplicaDescontoDe(double porcentagem);
 	
 	boolean temAutor() {
 		boolean notNull = this.autor != null;

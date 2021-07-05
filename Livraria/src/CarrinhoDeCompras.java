@@ -3,6 +3,11 @@ public class CarrinhoDeCompras {
 
 	private double total;
 	
+	/*
+	 * Apesar de não poder instanciar uma classe abstrata, 
+	 * você ainda pode usá-la como referência.
+	 */
+	
 	public void adiciona(Livro livro) {
 		System.out.println("Adicionando : " + livro);
 		livro.aplicaDescontoDe(0.05);
