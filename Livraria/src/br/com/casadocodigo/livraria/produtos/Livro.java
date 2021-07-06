@@ -1,3 +1,5 @@
+package br.com.casadocodigo.livraria.produtos;
+import br.com.casadocodigo.livraria.Autor;
 
 /*
  * Afinal, para que serve a classe Livro, se não podemos 
@@ -33,7 +35,7 @@ public abstract class Livro implements Produto {
 	
 	
 	//tipoRetorno nomeDoMétodo()
-	void mostrarDetalhes() {
+	public void mostrarDetalhes() {
 		String mensagem = "Detalhes do livro:";
 		System.out.println(mensagem);
 		System.out.println("Título: " + titulo);

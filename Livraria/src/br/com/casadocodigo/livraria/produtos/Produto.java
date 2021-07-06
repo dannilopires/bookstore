@@ -1,3 +1,4 @@
+package br.com.casadocodigo.livraria.produtos;
 
 /*
  * Como todo método sem corpo de uma interface é abstrato,

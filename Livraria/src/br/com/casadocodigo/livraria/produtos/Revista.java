@@ -1,3 +1,5 @@
+package br.com.casadocodigo.livraria.produtos;
+import br.com.casadocodigo.livraria.Editora;
 
 public class Revista implements Produto, Promocional {
 	private String titulo;

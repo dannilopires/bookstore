@@ -1,3 +1,6 @@
+package br.com.casadocodigo.livraria.produtos;
+import br.com.casadocodigo.livraria.Autor;
+
 /*
  * Ao utilizarmos a palavra reservada extends,
  * estamos dizendo que um Ebook(subclasse) HERDA

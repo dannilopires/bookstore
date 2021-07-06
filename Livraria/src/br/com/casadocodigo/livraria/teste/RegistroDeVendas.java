@@ -1,3 +1,11 @@
+package br.com.casadocodigo.livraria.teste;
+import java.time.LocalDate;
+import java.util.Date;
+
+import CarrinhoDeCompras;
+import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.produtos.Ebook;
+import br.com.casadocodigo.livraria.produtos.LivroFisico;
 
 public class RegistroDeVendas {
 	public static void main(String[] args) {
@@ -26,5 +34,7 @@ public class RegistroDeVendas {
 		if (livroFisico.aplicaDescontoDe10PorCento()) {
 			System.out.println("Valor agora é " + livroFisico.getValor());
 		}
+		
+	System.out.println(new Date());
 	}
 }
