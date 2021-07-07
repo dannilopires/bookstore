@@ -37,9 +37,11 @@ public class CadastroDeLivros {
 	
 		System.out.println("Valor do livro com desconto: " + livro.getValor());
 		
-		//Livro livro3 = new Livro(); // testando o construtor 
+		Livro livro3 = new LivroFisico(null); // testando o construtor 
+		livro3.mostrarDetalhes();
 		
-		//Livro livro4 = new Livro();
+		Livro livro4 = new LivroFisico(null);
+		livro4.mostrarDetalhes();
 		
 		Autor autor3 = new Autor();
 		autor3.setNome("Lima Barreto");

@@ -6,7 +6,7 @@ import br.com.casadocodigo.livraria.Autor;
  * estamos dizendo que um Ebook(subclasse) HERDA
  * tudo o que a classe Livro(superclasse) tem
  */
-public class Ebook extends Livro implements Promocional {
+public class Ebook extends Livro {
 	
 	private String waterMark;
 	

@@ -1,5 +1,6 @@
 package br.com.casadocodigo.livraria.produtos;
 import br.com.casadocodigo.livraria.Autor;
+import br.com.casadocodigo.livraria.exception.AutorNuloException;
 
 /*
  * Afinal, para que serve a classe Livro, se não podemos 
@@ -15,7 +16,7 @@ import br.com.casadocodigo.livraria.Autor;
  * Produto (interface) 
  */
 
-public abstract class Livro implements Produto {
+public abstract class Livro implements Produto, Promocional {
 	/*Todo atributo de classe deve ser privado,
 	 * assim garantimos que ninguém os acesse
 	 * diretamente e viole nossas regras de negócio
@@ -28,7 +29,9 @@ public abstract class Livro implements Produto {
 	private boolean impresso;
 
 	public Livro(Autor autor) {
-		this.autor = autor;
+		if(autor == null) {
+			throw new AutorNuloException("Autor do livro não pode ser null");
+		}
 		this.isbn = "000-00-00000-00-0";
 		this.impresso = true;
 	}
