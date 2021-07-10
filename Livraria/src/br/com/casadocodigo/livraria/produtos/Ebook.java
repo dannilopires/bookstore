@@ -6,7 +6,7 @@ import br.com.casadocodigo.livraria.Autor;
  * estamos dizendo que um Ebook(subclasse) HERDA
  * tudo o que a classe Livro(superclasse) tem
  */
-public class Ebook extends Livro {
+public class Ebook extends Livro implements Promocional{
 	
 	private String waterMark;
 	
@@ -53,6 +53,15 @@ public class Ebook extends Livro {
 	}
 	public void setWaterMark(String waterMark) {
 		this.waterMark = waterMark;
+	}
+	
+	/*
+	 * Ao sobrescrever o método toString (que toda classe
+	 * herda de Object), modificamos sua saída.
+	 */
+	@Override //com essa anotação, garantimos que o comportamento da classe pai seja alterado
+	public String toString() {
+		return "Eu sou um ebook";
 	}
 	
 

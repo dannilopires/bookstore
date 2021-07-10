@@ -45,5 +45,13 @@ public class CarrinhoDeCompras {
 	public Produto[] getProdutos() {
 		return produtos;
 	}
+	
+	/*
+	 * O polimorfismo é a chave para que isso tudo
+	 * funcione. Nosso método adiciona recebe um
+	 * produto como parâmetro e o acumula no arrau
+	 * de Produtos.
+	 * 
+	 */
 
 }

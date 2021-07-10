@@ -35,5 +35,21 @@ public class Autor {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+	
+	/*
+	 *  Estamos delegando a comparação do nome (String) para
+	 *  o método equals da própria classe String.
+	 *  Ele foi sobrescrito para fazer a comparação
+	 *  pelo texto passado, e não pela referência de 
+	 *  memória.
+	 *  
+	 */
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Autor)) return false;
+		Autor outro = (Autor) obj;
+		return this.nome.equals(outro.nome);
+	}
 
 }
